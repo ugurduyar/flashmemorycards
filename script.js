@@ -111,3 +111,5 @@ prevBtn.addEventListener("click", () => {
 });
 
 showBtn.addEventListener("click", () => addContainer.classList.add("show"));
+
+hideBtn.addEventListener("click", () => addContainer.classList.remove("show"));
