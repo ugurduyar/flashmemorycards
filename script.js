@@ -80,6 +80,12 @@ function getCardsData() {
   return cards === null ? [] : cards;
 }
 
+// Add cards to local storage
+function setCardsData(cards) {
+  localStorage.setItem("cards", JSON.stringify(cards));
+  window.location.reload();
+}
+
 createCards();
 
 nextBtn.addEventListener("click", () => {
