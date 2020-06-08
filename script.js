@@ -69,7 +69,7 @@ function createCard(data, index) {
 }
 
 function updateCurrentText() {
-    currentEl.innerText = `${}`
+  currentEl.innerText = `${currentActiveCard + 1}/${cardsEl.length}`;
 }
 
 createCards();
