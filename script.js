@@ -113,3 +113,24 @@ prevBtn.addEventListener("click", () => {
 showBtn.addEventListener("click", () => addContainer.classList.add("show"));
 
 hideBtn.addEventListener("click", () => addContainer.classList.remove("show"));
+
+// Add new card
+addCardBtn.addEventListener("click", () => {
+  const question = questionEl.value;
+  const answer = answerEl.value;
+
+  if (question.trim() && answer.trim()) {
+    const newCard = { question, answer };
+
+    createCard(newCard);
+
+    questionEl.value = "";
+    answerEl.value = "";
+
+    addContainer.classList.remove("show");
+
+    cardsData.push(newCard);
+
+    setCardsData(cardsData);
+  }
+});
