@@ -69,12 +69,19 @@ h1 button {
   left: 0;
   height: 100%;
   width: 100%;
+  transform: translateX(50%) rotateY(-10deg);
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .card.active {
   opacity: 1;
   cursor: pointer;
   z-index: 10;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.card.left {
+  transform: translateX(-50%) rotateY(10deg);
 }
 
 .inner-card {
@@ -83,6 +90,10 @@ h1 button {
   height: 100%;
   width: 100%;
   position: relative;
+}
+
+.card.show-answer .inner-card {
+  transform: rotateX(180deg);
 }
 
 .inner-card-front,
@@ -96,4 +107,9 @@ h1 button {
   height: 100%;
   width: 100%;
   background-color: white;
+}
+
+.inner-card-front {
+  transform: rotateX(0deg);
+  z-index: 2;
 }
