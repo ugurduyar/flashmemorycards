@@ -90,6 +90,7 @@ h1 button {
   height: 100%;
   width: 100%;
   position: relative;
+  transform-style: preserve-3d;
 }
 
 .card.show-answer .inner-card {
@@ -98,6 +99,7 @@ h1 button {
 
 .inner-card-front,
 .inner-card-back {
+  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -112,4 +114,8 @@ h1 button {
 .inner-card-front {
   transform: rotateX(0deg);
   z-index: 2;
+}
+
+.inner-card-back {
+  transform: rotateX(180deg);
 }
