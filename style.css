@@ -23,6 +23,8 @@ h1 {
 h1 button {
   position: absolute;
   right: 0;
+  font-weight: bold;
+  border-radius: 10px;
   transform: translate(120%, -50%);
   z-index: 2;
 }
